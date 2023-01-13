@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useContext , useEffect,useRef} from "react";
+import { WordleContext } from "../../App";
+
 
 const Key = (props) => {
+ 
+  const { guessTheWord, backspace, pressEnter } = useContext(WordleContext);
+
+  function handleClickForBig() {
+    if (props.alphabet == "Enter") {
+      console.log("enter");
+      pressEnter();
+    } else {
+      backspace();
+    }
+  }
+
   if (props.big) {
     return (
       <button
-        // onClick={() => ()}
+        onClick={() => handleClickForBig()}
         style={{
-          width: 65.4,
+          width: 65,
           height: 58,
           margin: 3,
           borderRadius: 3,
@@ -21,13 +35,13 @@ const Key = (props) => {
           fontWeight: "bold",
         }}
       >
-        {props.letter}
+        {props.alphabet}
       </button>
     );
   }
   return (
     <button
-    //   onClick={() => (props.letter)}
+      onClick={() => guessTheWord(props.alphabet)}
       style={{
         width: 43,
         height: 58,

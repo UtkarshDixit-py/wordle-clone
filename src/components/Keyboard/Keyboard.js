@@ -39,7 +39,6 @@ const Keyboard = () => {
       </div>
     );
   }
-
   function Set3() {
     return (
       <div
@@ -50,11 +49,11 @@ const Keyboard = () => {
           margin: 0,
         }}
       >
-        <Key big={true} letter={"Enter"} />
+        <Key big={true} alphabet={"Enter"} />
         {set3.map((char, index) => (
           <Key key={index} alphabet={char} />
         ))}
-        <Key big={true} letter={<FaBackspace />} />
+        <Key big={true} alphabet={<FaBackspace />} />
       </div>
     );
   }
@@ -69,3 +68,4 @@ const Keyboard = () => {
 };
 
 export default Keyboard;
+
