@@ -16,8 +16,6 @@ const Home = () => {
       <IoMdCloudyNight/>
       </button>
       <h1 className="text-[#5691c8] dark:text-white m-4 text-5xl font-extrabold">WORDLE</h1>
-      
-    
       <RowContainer />
       <Keyboard />
       </div>

@@ -44,18 +44,18 @@ function App() {
   // })
   
 
-  const handleKeyPress = useCallback((event) => {
-    if(event.key ==="Enter") pressEnter();
-    else if(event.key ==="Backspace") backspace();  
-    else if(event.key.match(/^[a-z]$/i)) guessTheWord(event.key)
-  }, []);
+  // const handleKeyPress = useCallback((event) => {
+  //   if(event.key ==="Enter") pressEnter();
+  //   else if(event.key ==="Backspace") backspace();  
+  //   else if(event.key.match(/^[a-z]$/i)) guessTheWord(event.key)
+  // }, []);
 
-  useEffect(() => {
-    document.addEventListener("keydown", handleKeyPress);
-    return () => {
-      document.removeEventListener("keydown", handleKeyPress);
-    };
-  }, [handleKeyPress]);
+  // useEffect(() => {
+  //   document.addEventListener("keydown", handleKeyPress);
+  //   return () => {
+  //     document.removeEventListener("keydown", handleKeyPress);
+  //   };
+  // }, [handleKeyPress]);
 
   return (
     <div className="App">
