@@ -1,11 +1,11 @@
-import React, { useState ,useEffect } from "react";
+import React, { useState ,useEffect ,useContext } from "react";
 import { WordleContext } from "../../App";
 
 const Cell = ({ id, rowId }) => {
   const [alphabet, setAlphabet] = useState("");
   const [completed, setCompleted] = useState(true);
   const [colors, setColors] = useState({ back: "white", font: "#5691c8" });
-  const { guessWord, word, currentRow, completedRows } = React.useContext(WordleContext);
+  const { guessWord, word, currentRow, completedRows } = useContext(WordleContext);
 
   const style = {
     backgroundColor: colors.back,
